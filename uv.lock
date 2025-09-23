@@ -633,7 +633,53 @@ standard-no-fastapi-cloud-cli = [
 ]
 
 [[package]]
-name = "fastapi-best-architecture"
+name = "fastapi-cli"
+version = "0.0.10"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+dependencies = [
+    { name = "rich-toolkit" },
+    { name = "typer" },
+    { name = "uvicorn", extra = ["standard"] },
+]
+sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/31/b6/ed25b8874a27f684bf601990c48fcb3edb478edca2b9a38cc2ba196fb304/fastapi_cli-0.0.10.tar.gz", hash = "sha256:85a93df72ff834c3d2a356164512cabaf8f093d50eddad9309065a9c9ac5193a", size = 16994 }
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/7c/62/0f00036925c0614e333a2baf739c861453a6779331ffb47ec9a6147f860b/fastapi_cli-0.0.10-py3-none-any.whl", hash = "sha256:04bef56b49f7357c6c4acd4f793b4433ed3f511be431ed0af68db6d3f8bd44b3", size = 10851 },
+]
+
+[package.optional-dependencies]
+standard-no-fastapi-cloud-cli = [
+    { name = "uvicorn", extra = ["standard"] },
+]
+
+[[package]]
+name = "fastapi-limiter"
+version = "0.1.6"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+dependencies = [
+    { name = "fastapi" },
+    { name = "redis" },
+]
+sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/7f/99/c7903234488d4dca5f9bccb4f88c2f582a234f0dca33348781c9cf8a48c6/fastapi_limiter-0.1.6.tar.gz", hash = "sha256:6f5fde8efebe12eb33861bdffb91009f699369a3c2862cdc7c1d9acf912ff443", size = 8307 }
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/cd/b5/6f6b4d18bee1cafc857eae12738b3a03b7d1102b833668be868938c57b9d/fastapi_limiter-0.1.6-py3-none-any.whl", hash = "sha256:2e53179a4208b8f2c8795e38bb001324d3dc37d2800ff49fd28ec5caabf7a240", size = 15829 },
+]
+
+[[package]]
+name = "fastapi-pagination"
+version = "0.14.0"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+dependencies = [
+    { name = "fastapi" },
+    { name = "pydantic" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/b7/94/7f894a3137b2c5618f5b677c468a9a54c3e82a40019e168c7e1ac02112a4/fastapi_pagination-0.14.0.tar.gz", hash = "sha256:e576800270f2714c781241b66c11f5da24f6671670edc122f5be7e4c2bd7f353", size = 557583 }
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/74/f3/b00424f9fe4d1f0a7657b7ab931bdfea5a9a9103f6684a0d64687d6f9f94/fastapi_pagination-0.14.0-py3-none-any.whl", hash = "sha256:72ed471c79c3aa07940b287b9cf022503ec2e69e1f2ca5a7a5fcd8152cc43392", size = 52517 },
+]
+
+[[package]]
+name = "fastapi-template"
 source = { editable = "." }
 dependencies = [
     { name = "aiofiles" },
@@ -740,52 +786,6 @@ lint = [{ name = "pre-commit", specifier = ">=4.3.0" }]
 server = [
     { name = "aio-pika", specifier = ">=9.5.7" },
     { name = "wait-for-it", specifier = ">=2.3.0" },
-]
-
-[[package]]
-name = "fastapi-cli"
-version = "0.0.10"
-source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
-dependencies = [
-    { name = "rich-toolkit" },
-    { name = "typer" },
-    { name = "uvicorn", extra = ["standard"] },
-]
-sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/31/b6/ed25b8874a27f684bf601990c48fcb3edb478edca2b9a38cc2ba196fb304/fastapi_cli-0.0.10.tar.gz", hash = "sha256:85a93df72ff834c3d2a356164512cabaf8f093d50eddad9309065a9c9ac5193a", size = 16994 }
-wheels = [
-    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/7c/62/0f00036925c0614e333a2baf739c861453a6779331ffb47ec9a6147f860b/fastapi_cli-0.0.10-py3-none-any.whl", hash = "sha256:04bef56b49f7357c6c4acd4f793b4433ed3f511be431ed0af68db6d3f8bd44b3", size = 10851 },
-]
-
-[package.optional-dependencies]
-standard-no-fastapi-cloud-cli = [
-    { name = "uvicorn", extra = ["standard"] },
-]
-
-[[package]]
-name = "fastapi-limiter"
-version = "0.1.6"
-source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
-dependencies = [
-    { name = "fastapi" },
-    { name = "redis" },
-]
-sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/7f/99/c7903234488d4dca5f9bccb4f88c2f582a234f0dca33348781c9cf8a48c6/fastapi_limiter-0.1.6.tar.gz", hash = "sha256:6f5fde8efebe12eb33861bdffb91009f699369a3c2862cdc7c1d9acf912ff443", size = 8307 }
-wheels = [
-    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/cd/b5/6f6b4d18bee1cafc857eae12738b3a03b7d1102b833668be868938c57b9d/fastapi_limiter-0.1.6-py3-none-any.whl", hash = "sha256:2e53179a4208b8f2c8795e38bb001324d3dc37d2800ff49fd28ec5caabf7a240", size = 15829 },
-]
-
-[[package]]
-name = "fastapi-pagination"
-version = "0.14.0"
-source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
-dependencies = [
-    { name = "fastapi" },
-    { name = "pydantic" },
-    { name = "typing-extensions" },
-]
-sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/b7/94/7f894a3137b2c5618f5b677c468a9a54c3e82a40019e168c7e1ac02112a4/fastapi_pagination-0.14.0.tar.gz", hash = "sha256:e576800270f2714c781241b66c11f5da24f6671670edc122f5be7e4c2bd7f353", size = 557583 }
-wheels = [
-    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/74/f3/b00424f9fe4d1f0a7657b7ab931bdfea5a9a9103f6684a0d64687d6f9f94/fastapi_pagination-0.14.0-py3-none-any.whl", hash = "sha256:72ed471c79c3aa07940b287b9cf022503ec2e69e1f2ca5a7a5fcd8152cc43392", size = 52517 },
 ]
 
 [[package]]
