@@ -42,7 +42,7 @@ class Settings(BaseSettings):
     # 数据库
     DATABASE_ECHO: bool | Literal['debug'] = False
     DATABASE_POOL_ECHO: bool | Literal['debug'] = False
-    DATABASE_SCHEMA: str = 'tomeai'
+    DATABASE_SCHEMA: str = 'fba'
     DATABASE_CHARSET: str = 'utf8mb4'
 
     # .env Redis
@@ -188,7 +188,7 @@ class Settings(BaseSettings):
 
     # Plugin 配置
     PLUGIN_PIP_CHINA: bool = True
-    PLUGIN_PIP_INDEX_URL: str = 'https://mirrors.aliyun.com/pypi/simple/'
+    PLUGIN_PIP_INDEX_URL: str = 'https://pypi.tuna.tsinghua.edu.cn/simple'
     PLUGIN_REDIS_PREFIX: str = 'fba:plugin'
 
     # I18n 配置
@@ -200,15 +200,7 @@ class Settings(BaseSettings):
     # .env Redis
     CELERY_BROKER_REDIS_DATABASE: int
 
-    # .env RabbitMQ
-    # docker run -d --hostname fba-mq --name fba-mq  -p 5672:5672 -p 15672:15672 rabbitmq:latest
-    CELERY_RABBITMQ_HOST: str
-    CELERY_RABBITMQ_PORT: int
-    CELERY_RABBITMQ_USERNAME: str
-    CELERY_RABBITMQ_PASSWORD: str
-
     # 基础配置
-    CELERY_BROKER: Literal['rabbitmq', 'redis'] = 'redis'
     CELERY_REDIS_PREFIX: str = 'fba:celery'
     CELERY_TASK_MAX_RETRIES: int = 5
 
