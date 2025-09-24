@@ -33,6 +33,7 @@
     "@vben/icons": "workspace:*",
     "@vben/layouts": "workspace:*",
     "@vben/locales": "workspace:*",
+    "@vben/plugins": "workspace:*",
     "@vben/preferences": "workspace:*",
     "@vben/request": "workspace:*",
     "@vben/stores": "workspace:*",
@@ -47,5 +48,8 @@
     "socket.io-client": "^4.8.1",
     "vue": "catalog:",
     "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4"
   }
 }
