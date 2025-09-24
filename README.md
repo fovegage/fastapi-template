@@ -1,5 +1,12 @@
 ## fastapi-template
 
+## UI
+
+![img.png](imgs/analytics.png)
+![img.png](imgs/workspace.png)
+![img.png](imgs/user.png)
+![img.png](imgs/redis.png)
+
 ## Development
 
 ```
@@ -33,3 +40,4 @@ pre-commit run --all-files
 ## Acknowledgments
 
 - [fastapi_best_architecture](https://github.com/fastapi-practices/fastapi_best_architecture)
+- [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
